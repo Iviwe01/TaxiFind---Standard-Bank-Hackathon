@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxiFind</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>TaxiFind</h1>
+        </header>
+		<div class="slogan">
+    <h2>Low Cost. Innovative. Reliable</h2>
+</div>
+
+        <main>
+            <section id="map-section">
+                <div id="map">
+                    <img src="https://th.bing.com/th?id=OIP.zleiM0xcZdPsLheWo1aKPAHaKa&w=210&h=296&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Map of Bellville" />
+                </div>
+            </section>
+
+            <section id="trip-planner">
+                <h2>Plan Your Trip</h2>
+                <div class="input-group">
+                    <input type="text" id="pickup-location" placeholder="Pickup Location">
+                    <button id="location-icon"><i class="fas fa-map-marker-alt"></i></button>
+                </div>
+                <input type="text" id="destination" placeholder="Destination">
+                <button id="confirm-route">Confirm Route</button>
+                <div id="eta-display">
+                    <h3>Expected Time of Arrival: <span id="eta-time">-- : --</span></h3>
+                </div>
+                <button id="share-trip"><i class="fas fa-share-alt"></i> Share Trip</button>
+                
+                <!-- New Accessibility Section -->
+                <div id="accessibility-options">
+                    <h3>Accessibility Options</h3>
+                    <label>
+                        <input type="checkbox" id="disability-checkbox">
+                        I require accessibility assistance
+                    </label>
+                    <div id="disability-details" style="display: none;">
+                        <input type="text" id="disability-type" placeholder="Enter type of assistance needed">
+                        <button id="submit-disability">Submit</button>
+                    </div>
+                </div>
+                
+                <!-- New Eco-friendly Option -->
+                <div id="eco-friendly-option">
+                    <label>
+                        <input type="checkbox" id="eco-friendly-checkbox">
+                        Request eco-friendly vehicle
+                    </label>
+                </div>
+                
+                <!-- New Language Preference -->
+                <div id="language-preference">
+                    <h3>Preferred Driver Language</h3>
+                    <select id="language-select">
+                        <option value="any">Any</option>
+                        <option value="english">English</option>
+                        <option value="afrikaans">Afrikaans</option>
+                        <option value="xhosa">Xhosa</option>
+                        <option value="zulu">Zulu</option>
+                    </select>
+                </div>
+            </section>
+
+            <section id="weather-section">
+                <h2>Weather</h2>
+                <div id="weather-icon"><i class="fas fa-sun"></i></div>
+                <p>Temperature: <span id="temp"></span>°C</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p>Wind: <span id="wind"></span> km/h</p>
+            </section>
+
+            <section id="drivers-section">
+                <h2>Available Drivers</h2>
+                <div id="driver-list"></div>
+            </section>
+            
+            <!-- New Safety Tips Section -->
+            <section id="safety-tips">
+                <h2>Safety Tips</h2>
+                <ul id="safety-tips-list">
+                    <!-- Tips will be dynamically added here -->
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <div id="rating">
+                <h3>Rate Your Driver</h3>
+                <div id="stars">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+            </div>
+            <button id="emergency-btn">Emergency</button>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
